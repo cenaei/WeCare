@@ -1,0 +1,110 @@
+@import "reset";
+@import "mixin";
+
+.header {
+  @include flexBetween(column);
+  margin-bottom: 2rem;
+  padding: 1rem 4rem;
+}
+
+.navbar {
+  @include flexBetween(row);
+  align-items: center;
+  width: 100%;
+  @include font(1.4rem, 600);
+  img {
+    height: 5rem;
+  }
+  ul {
+    @include flex(row);
+    // justify-self: flex-start;
+    li {
+      margin: 0 1rem;
+    }
+  }
+}
+
+.hero {
+  @include flexBetween(row);
+  width: 80%;
+  .left {
+    @include flexBetween(column);
+  }
+}
+
+.search {
+  @include flexBetween(column);
+  div {
+    @include flexBetween(row);
+  }
+  ul {
+    @include flexBetween(row);
+    li {
+      margin: 0 1rem;
+    }
+  }
+}
+
+.popular {
+  @include flexBetween(column);
+  &__part {
+    @include flexBetween(row);
+  }
+
+  .menu {
+    @include flexBetween(column);
+    button {
+      margin: .5rem 0;
+    }
+  }
+
+  .list {
+    @include flexBetween(row);
+    &__item {
+      @include flexBetween(column);
+      margin: 0 1rem;
+    }
+  }
+}
+
+.find {
+  @include flexBetween(row);
+  .left {
+    @include flexBetween(column);
+  }
+  &__items {
+    @include flexBetween(column);
+  }
+}
+
+.whyus {
+  @include flexBetween(row);
+  width: 70%;
+}
+
+.specialist {
+  @include flexBetween(column);
+
+  .doctors {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    img {
+      width: 30rem;
+    }
+    &__item {
+      h4 {
+        align-self: center;
+      }
+      @include flexCenter(column);
+    }
+    }
+}
+
+.feedback {
+  @include flexCenter(column);
+  h2 {align-self: center;}
+  img {width: 10rem;}
+}
