@@ -231,6 +231,7 @@
 .specialist {
   @include flexCenter(column);
   @include maxwidth(110rem);
+  h3,
   h5,
   p {
     align-self: center;
