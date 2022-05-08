@@ -1,366 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/38a4aeacdd.js" crossorigin="anonymous"></script>
-  <link rel="icon" type="image/x-icon" href="./assets/img/WeCare.ico">
-  <link rel="stylesheet" href="./assets/css/main.css">
-  <title>We Care ;)</title>
-</head>
-<body>
-  <header class="header">
-    <nav class="navbar">
-      <img src="./assets/img/WeCare-Logo.png" alt="WeCare-Logo">
-      <ul class="navbar__item">
-        <li>Find a Doctor</li>
-        <li>Find a Hospital</li>
-        <li>Health A to Z</li>
-      </ul>
-      <div class="navbar__button">
-        <Button>Log in</Button>
-        <Button>Sign in</Button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/38a4aeacdd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/x-icon" href="./assets/img/WeCare.ico" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <title>We Care ;)</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <img src="./assets/img/WeCare-Logo.png" alt="WeCare-Logo" />
+        <ul class="navbar__item">
+          <li>Find a Doctor</li>
+          <li>Find a Hospital</li>
+          <li>Health A to Z</li>
+        </ul>
+        <div class="navbar__button">
+          <button>Log in</button>
+          <button>Sign in</button>
+        </div>
+      </nav>
+      <div class="hero">
+        <div class="left">
+          <h1>Feel better about finding healthcare</h1>
+          <p>
+            At Healthgrades, we take the work out of finding the right <br />
+            doctors, hospitals and care for you and your family
+          </p>
+          <div class="hero__button">
+            <button>Profile for Every</button>
+            <button>Dostor in America</button>
+          </div>
+        </div>
+        <div class="right">
+          <figure>
+            <img src="./assets/img/doctor/doc (0).png" alt="image of doctor" />
+          </figure>
+        </div>
       </div>
-    </nav>
-    <div class="hero">
+    </header>
+    <section class="search">
+      <form action="">
+        <input
+          type="text"
+          placeholder="Search Doctor, Conditions or Prodecurs"
+        />
+        <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+        <input type="text" placeholder="Set your location" />
+        <!-- <i class="fa-regular fa-location-dot"></i> -->
+        <button type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+      <h5>You may be looking for</h5>
+      <div>
+        <ul>
+          <li>Family Medicine <i class="fa-solid fa-xmark"></i></li>
+          <li>Pediatrics <i class="fa-solid fa-xmark"></i></li>
+          <li>Top Hospital <i class="fa-solid fa-xmark"></i></li>
+          <li>Telehealth <i class="fa-solid fa-xmark"></i></li>
+          <li>COVID-19 <i class="fa-solid fa-xmark"></i></li>
+          <li>Orthopedic Sugery <i class="fa-solid fa-xmark"></i></li>
+        </ul>
+        <button>More</button>
+      </div>
+    </section>
+    <section class="popular">
+      <h2>Popular Searches on Wecare</h2>
+      <div class="popular__part">
+        <div class="menu">
+          <button>Specialties</button>
+          <button>Conditions</button>
+          <button>Procedures</button>
+        </div>
+        <div class="list">
+          <div class="list__item">
+            <img
+              src="./assets/img/icon/Dermatology.png"
+              alt="Dermatology Logo"
+            />
+            <h6>Dermatology</h6>
+          </div>
+          <div class="list__item">
+            <img
+              src="./assets/img/icon/Internal Medicine.png"
+              alt="Internal Medicine Logo"
+            />
+            <h6>Internal Medicine</h6>
+          </div>
+          <div class="list__item">
+            <img src="./assets/img/icon/Neurology.png" alt="Neurology Logo" />
+            <h6>Neurology</h6>
+          </div>
+          <div class="list__item">
+            <img
+              src="./assets/img/icon/General Medicine.png"
+              alt="General Medicine Logo"
+            />
+            <h6>General Medicine</h6>
+          </div>
+          <div class="list__item">
+            <img src="./assets/img/icon/Dentisty.png" alt="Dentisty Logo" />
+            <h6>Dentisty</h6>
+          </div>
+          <div class="list__item">
+            <img
+              src="./assets/img/icon/Otolaryngology.png"
+              alt="Otolaryngology Logo"
+            />
+            <h6>Otolaryngology</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="find">
       <div class="left">
-        <h1>Feel better about finding healthcare</h1>
-        <p>At Healthgrades, we take the work out of finding the right <br>
-          doctors, hospitals and care for you and your family</p>
-        <div class="hero__button">
-          <button>Profile for Every</button>
-          <button>Dostor in America</button>
+        <h2>Find the right doctor right at your fingertips</h2>
+        <p>Wecare give you the tools and information you need to</p>
+        <div class="find__items">
+          <div class="find__items--first">
+            <h4>
+              <i class="fa-solid fa-magnifying-glass"></i> Search the nearest
+              hospital
+            </h4>
+            <p>lorem ipsum dolor sit amet, consectetur adip</p>
+          </div>
+          <div class="find__items--second">
+            <h4>
+              <i class="fa-solid fa-magnifying-glass"></i> Search the nearest
+              hospital
+            </h4>
+            <p>lorem ipsum dolor sit amet, consectetur adip</p>
+          </div>
+          <div class="find__items--third">
+            <h4>
+              <i class="fa-solid fa-magnifying-glass"></i> Search the nearest
+              hospital
+            </h4>
+            <p>lorem ipsum dolor sit amet, consectetur adip</p>
+          </div>
         </div>
       </div>
       <div class="right">
-        <figure>
-          <img src="./assets/img/doctor/doc (0).png" alt="image of doctor" />
-        </figure>
+        <img src="./assets/img/doctor/find.png" alt="Doctor" />
       </div>
-    </div>
-  </header>
-  <section class="search">
-    <form action="">
-      <input type="text" placeholder="Search Doctor, Conditions or Prodecurs">
-      <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
-      <input type="text" placeholder="Set your location">
-      <!-- <i class="fa-regular fa-location-dot"></i> -->
-      <button type="submit">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-    </form>
-    <h5>You may be looking for</h5>
-    <div>
-      <ul>
-        <li>Family Medicine <i class="fa-solid fa-xmark"></i></li>
-        <li>Pediatrics <i class="fa-solid fa-xmark"></i></li>
-        <li>Top Hospital <i class="fa-solid fa-xmark"></i></li> 
-        <li>Telehealth <i class="fa-solid fa-xmark"></i></li>
-        <li>COVID-19 <i class="fa-solid fa-xmark"></i></li>
-        <li>Orthopedic Sugery <i class="fa-solid fa-xmark"></i></li>
-      </ul>
-      <button>More</button>
-    </div>
-  </section>
-  <section class="popular">
-    <h2>Popular Searches on Wecare</h2>
-    <div class="popular__part">
-      <div class="menu">
-        <button>Specialties</button>
-        <button>Conditions</button>
-        <button>Procedures</button>
-      </div>
-      <div class="list">
-        <div class="list__item">
-          <img src="./assets/img/icon/Dermatology.png" alt="Dermatology Logo">
-          <h6>Dermatology</h6>
-        </div>
-        <div class="list__item">
-          <img src="./assets/img/icon/Internal Medicine.png" alt="Internal Medicine Logo">
-          <h6>Internal Medicine</h6>
-        </div>
-        <div class="list__item">
-          <img src="./assets/img/icon/Neurology.png" alt="Neurology Logo">
-          <h6>Neurology</h6>
-        </div>
-        <div class="list__item">
-          <img src="./assets/img/icon/General Medicine.png" alt="General Medicine Logo">
-          <h6>General Medicine</h6>
-        </div>
-        <div class="list__item">
-          <img src="./assets/img/icon/Dentisty.png" alt="Dentisty Logo">
-          <h6>Dentisty</h6>
-        </div>
-        <div class="list__item">
-          <img src="./assets/img/icon/Otolaryngology.png" alt="Otolaryngology Logo">
-          <h6>Otolaryngology</h6>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="find">
-    <div class="left">
-      <h2>Find the right doctor right at your fingertips</h2>
-      <p>Wecare give you the tools and information you need to</p>
-      <div class="find__items">
-        <div class="find__items--first">
-          <h4><i class="fa-solid fa-magnifying-glass"></i> Search the nearest hospital</h4>
-          <p>lorem ipsum dolor sit amet, consectetur adip</p>          
-        </div>
-        <div class="find__items--second">
-          <h4><i class="fa-solid fa-magnifying-glass"></i> Search the nearest hospital</h4>
-          <p>lorem ipsum dolor sit amet, consectetur adip</p>          
-        </div>
-        <div class="find__items--third">
-          <h4><i class="fa-solid fa-magnifying-glass"></i> Search the nearest hospital</h4>
-          <p>lorem ipsum dolor sit amet, consectetur adip</p>          
-        </div>
-      </div>
-    </div>
-    <div class="right">
-      <img src="./assets/img/doctor/find.png" alt="Doctor">
-    </div>
-  </section>
-  <section class="whyus">
-    <div class="left">
-      <img src="./assets/img/doctor/whyus.png" alt="Doctor">
-    </div>
-    <div class="right">
-      <h2>Why you choose We.care</h2>
-      <p>Wecare gives you the best tools and information you need</p>
-      <ul>
-        <li>lorem ipsum dolor sit amet</li>
-        <li>lorem ipsum dolor sit amet</li>
-        <li>lorem ipsum dolor sit amet</li>
-        <li>lorem ipsum dolor sit amet</li>
-        <li>lorem ipsum dolor sit amet</li>
-      </ul>
-      <button>Get Free Advice</button>
-    </div>
-  </section>
-  <section class="specialist">
-    <h3>Meet our specialist</h3>
-    <p>Where gives you like tools and information you need to</p>
-    <div class="doctors">
-      <div class="doctors__item">
-        <figure>
-          <img src="./assets/img/doctor/doc (0).png" alt="Doctor">
-        </figure>
-        <h4>Dr. Leslie Alexander</h4>
-        <p>Dental Surgery</p>
-      </div>
-      <div class="doctors__item">
-        <figure>
-          <img src="./assets/img/doctor/doc (0).png" alt="Doctor">
-        </figure>
-        <h4>Dr. Kathryn Murphy</h4>
-        <p>Pediatrics Medicine</p>
-      </div>
-      <div class="doctors__item">
-        <figure>
-          <img src="./assets/img/doctor/doc (0).png" alt="Doctor">
-        </figure>
-        <h4>Dr. Roberto Fox</h4>
-        <p>Lorem Ipsom</p>
-      </div>
-      <div class="doctors__item">
-        <figure>
-          <img src="./assets/img/doctor/doc (0).png" alt="Doctor">
-        </figure>
-        <h4>Dr. Esther Howard</h4>
-        <p>Lorem Ipsom</p>
-      </div>
-      <div class="doctors__item">
-        <figure>
-          <img src="./assets/img/doctor/doc (0).png" alt="Doctor">
-        </figure>
-        <h4>Dr. Albert Flores</h4>
-        <p>Lorem Ipsom</p>
-      </div>
-      <div class="doctors__item">
-        <figure>
-          <img src="./assets/img/doctor/doc (0).png" alt="Doctor">
-        </figure>
-        <h4>Dr. Jerome Bell</h4>
-        <p>Obstetrics & Gynecologists</p>
-      </div>
-      <div class="doctors__item">
-        <figure>
-          <img src="./assets/img/doctor/doc (0).png" alt="Doctor">
-        </figure>
-        <h4>Dr. Arlene McCoy</h4>
-        <p>Lorem Ipsom</p>
-      </div>
-      <div class="doctors__item">
-        <figure>
-          <img src="./assets/img/doctor/doc (0).png" alt="Doctor">
-        </figure>
-        <h4>Dr. Jenny Wilson</h4>
-        <p>Lorem Ipsom</p>
-      </div>
-    </div>
-  </section>
-  <section class="feedback">
-    <h2>Our patients feedback about us</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis quidem praesentium deserunt dolorum aliquid corrupti necessitatibus magnam soluta earum dolor error iste neque, consequuntur velit tenetur ullam eaque, placeat natus!</p>
-    <div class="feed">
+    </section>
+    <section class="whyus">
       <div class="left">
-        <figure>
-          <img src="./assets/img/patient.png" alt="Patient Image">
-        </figure>
+        <img src="./assets/img/doctor/whyus.png" alt="Doctor" />
       </div>
       <div class="right">
-        <div class="comment">
-          <div class="comment__item">
-            <div class="profile">
-              <figure><img src="./assets/img/person/ (1).jpg" alt="person image"></figure>
-              <div class="profile__info">
-                <div class="profile__info--name">Constance J. Ericson</div>
-                <div class="profile__info--state">Canaan, NH 03741</div>
-                <div class="profile__info--stars">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
+        <h2>Why you choose We.care</h2>
+        <p>Wecare gives you the best tools and information you need</p>
+        <ul>
+          <li>lorem ipsum dolor sit amet</li>
+          <li>lorem ipsum dolor sit amet</li>
+          <li>lorem ipsum dolor sit amet</li>
+          <li>lorem ipsum dolor sit amet</li>
+          <li>lorem ipsum dolor sit amet</li>
+        </ul>
+        <button>Get Free Advice</button>
+      </div>
+    </section>
+    <section class="specialist">
+      <h3>Meet our specialist</h3>
+      <p>Where gives you like tools and information you need to</p>
+      <div class="doctors">
+        <div class="doctors__item">
+          <figure>
+            <img src="./assets/img/doctor/doc (0).png" alt="Doctor" />
+          </figure>
+          <h4>Dr. Leslie Alexander</h4>
+          <p>Dental Surgery</p>
+        </div>
+        <div class="doctors__item">
+          <figure>
+            <img src="./assets/img/doctor/doc (0).png" alt="Doctor" />
+          </figure>
+          <h4>Dr. Kathryn Murphy</h4>
+          <p>Pediatrics Medicine</p>
+        </div>
+        <div class="doctors__item">
+          <figure>
+            <img src="./assets/img/doctor/doc (0).png" alt="Doctor" />
+          </figure>
+          <h4>Dr. Roberto Fox</h4>
+          <p>Lorem Ipsom</p>
+        </div>
+        <div class="doctors__item">
+          <figure>
+            <img src="./assets/img/doctor/doc (0).png" alt="Doctor" />
+          </figure>
+          <h4>Dr. Esther Howard</h4>
+          <p>Lorem Ipsom</p>
+        </div>
+        <div class="doctors__item">
+          <figure>
+            <img src="./assets/img/doctor/doc (0).png" alt="Doctor" />
+          </figure>
+          <h4>Dr. Albert Flores</h4>
+          <p>Lorem Ipsom</p>
+        </div>
+        <div class="doctors__item">
+          <figure>
+            <img src="./assets/img/doctor/doc (0).png" alt="Doctor" />
+          </figure>
+          <h4>Dr. Jerome Bell</h4>
+          <p>Obstetrics & Gynecologists</p>
+        </div>
+        <div class="doctors__item">
+          <figure>
+            <img src="./assets/img/doctor/doc (0).png" alt="Doctor" />
+          </figure>
+          <h4>Dr. Arlene McCoy</h4>
+          <p>Lorem Ipsom</p>
+        </div>
+        <div class="doctors__item">
+          <figure>
+            <img src="./assets/img/doctor/doc (0).png" alt="Doctor" />
+          </figure>
+          <h4>Dr. Jenny Wilson</h4>
+          <p>Lorem Ipsom</p>
+        </div>
+      </div>
+    </section>
+    <section class="feedback">
+      <h2>Our patients feedback about us</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis
+        quidem praesentium deserunt dolorum aliquid corrupti necessitatibus
+        magnam soluta earum dolor error iste neque, consequuntur velit tenetur
+        ullam eaque, placeat natus!
+      </p>
+      <div class="feed">
+        <div class="left">
+          <figure>
+            <img src="./assets/img/patient.png" alt="Patient Image" />
+          </figure>
+        </div>
+        <div class="right">
+          <div class="swiper swiper-pa">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="profile">
+                  <figure>
+                    <img
+                      src="./assets/img/person/ (1).jpg"
+                      alt="person image"
+                    />
+                  </figure>
+                  <div class="profile__info">
+                    <div class="profile__info--name">Constance J. Ericson</div>
+                    <div class="profile__info--state">Canaan, NH 03741</div>
+                    <div class="profile__info--stars">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
                 </div>
+                <p>
+                  lorem ipsum dolor sit amet and information dolor sit amet,
+                  consectetur adipisicing elit
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <div class="profile">
+                  <figure>
+                    <img
+                      src="./assets/img/person/ (2).jpg"
+                      alt="person image"
+                    />
+                  </figure>
+                  <div class="profile__info">
+                    <div class="profile__info--name">Henry R. Hicks</div>
+                    <div class="profile__info--state">Boston, MA 02215</div>
+                    <div class="profile__info--stars">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star-half"></i>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  lorem ipsum dolor sit amet and information dolor sit amet,
+                  consectetur adipisicing elit
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <div class="profile">
+                  <figure>
+                    <img
+                      src="./assets/img/person/ (3).jpg"
+                      alt="person image"
+                    />
+                  </figure>
+                  <div class="profile__info">
+                    <div class="profile__info--name">Elias B. Stamper</div>
+                    <div class="profile__info--state">Pine Bluff, AR 71602</div>
+                    <div class="profile__info--stars">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star-half"></i>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  lorem ipsum dolor sit amet and information dolor sit amet,
+                  consectetur adipisicing elit
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <div class="profile">
+                  <figure>
+                    <img
+                      src="./assets/img/person/ (4).jpg"
+                      alt="person image"
+                    />
+                  </figure>
+                  <div class="profile__info">
+                    <div class="profile__info--name">Shirley M. Sears</div>
+                    <div class="profile__info--state">
+                      White Plains, NY 10601
+                    </div>
+                    <div class="profile__info--stars">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star-half"></i>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  lorem ipsum dolor sit amet and information dolor sit amet,
+                  consectetur adipisicing elit
+                </p>
               </div>
             </div>
-            <p>lorem ipsum dolor sit amet and information dolor sit amet, consectetur adipisicing elit</p>
-          </div>
-          <div class="comment__item">
-            <div class="profile">
-              <figure><img src="./assets/img/person/ (2).jpg" alt="person image"></figure>
-              <div class="profile__info">
-                <div class="profile__info--name">Henry R. Hicks</div>
-                <div class="profile__info--state">Boston, MA 02215</div>
-                <div class="profile__info--stars">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star-half"></i>
-                </div>
-              </div>
-            </div>
-            <p>lorem ipsum dolor sit amet and information dolor sit amet, consectetur adipisicing elit</p>
-          </div>
-          <div class="comment__item">
-            <div class="profile">
-              <figure><img src="./assets/img/person/ (3).jpg" alt="person image"></figure>
-              <div class="profile__info">
-                <div class="profile__info--name">Elias B. Stamper</div>
-                <div class="profile__info--state">Pine Bluff, AR 71602</div>
-                <div class="profile__info--stars">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star-half"></i>
-                </div>
-              </div>
-            </div>
-            <p>lorem ipsum dolor sit amet and information dolor sit amet, consectetur adipisicing elit</p>
-          </div>
-          <div class="comment__item">
-            <div class="profile">
-              <figure><img src="./assets/img/person/ (4).jpg" alt="person image"></figure>
-              <div class="profile__info">
-                <div class="profile__info--name">Shirley M. Sears</div>
-                <div class="profile__info--state">White Plains, NY 10601</div>
-                <div class="profile__info--stars">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star-half"></i>
-                </div>
-              </div>
-            </div>
-            <p>lorem ipsum dolor sit amet and information dolor sit amet, consectetur adipisicing elit</p>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="subscribe">
-    <h2>Subscribe for any news update from wecare</h2>
-    <div>
-      <input type="email" name="mail" id="email" placeholder="Enter your email address">
-      <button>Subscribe</button>
-    </div>
-  </section>
-  <footer class="footer">
-    <div class="footer__items">
-      <figure><img src="./assets/img/WeCare-Logo.png" alt="WeCare-Logo"></figure>
-      <div class="footer__socialmedia">
-        <a href="#twitter">
-          <i class="fa-brands fa-twitter"></i>
-        </a>
-        <a href="#facebook">
-          <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="#telegram">
-          <i class="fa-brands fa-telegram"></i>
-        </a>
-        <a href="#youtube">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-        <a href="#tiktok">
-          <i class="fa-brands fa-tiktok"></i>
-        </a>
-        <a href="#discord">
-          <i class="fa-brands fa-discord"></i>
-        </a>
+    </section>
+    <section class="subscribe">
+      <h2>Subscribe for any news update from wecare</h2>
+      <div>
+        <input
+          type="email"
+          name="mail"
+          id="email"
+          placeholder="Enter your email address"
+        />
+        <button>Subscribe</button>
       </div>
-    </div>
-    <div class="footer__items">
-      <h5>For Patients</h5>
-      <ul>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-      </ul>
-    </div>
-    <div class="footer__items">
-      <h5>For Providers</h5>
-      <ul>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-      </ul>
-    </div>
-    <div class="footer__items">
-      <h5>for Partners</h5>
-      <ul>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-      </ul>
-    </div>
-    <div class="footer__items">
-      <h5>Our Company</h5>
-      <ul>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-        <li>Lorem Ipsum</li>
-      </ul>
-    </div>
-  </footer>
-</body>
+    </section>
+    <footer class="footer">
+      <div class="footer__items">
+        <figure>
+          <img src="./assets/img/WeCare-Logo.png" alt="WeCare-Logo" />
+        </figure>
+        <div class="footer__socialmedia">
+          <div class="footer__socialmedia--top">
+            <a href="#twitter">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#facebook">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#telegram">
+              <i class="fa-brands fa-telegram"></i>
+            </a>
+          </div>
+          <div class="footer__socialmedia--bottom">
+            <a href="#youtube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="#tiktok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="#discord">
+              <i class="fa-brands fa-discord"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__items">
+        <h5>For Patients</h5>
+        <ul>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+        </ul>
+      </div>
+      <div class="footer__items">
+        <h5>For Providers</h5>
+        <ul>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+        </ul>
+      </div>
+      <div class="footer__items">
+        <h5>for Partners</h5>
+        <ul>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+        </ul>
+      </div>
+      <div class="footer__items">
+        <h5>Our Company</h5>
+        <ul>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Swiper Kit -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper-pa", {
+        grabCursor: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
 </html>

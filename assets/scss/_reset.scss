@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 
+// COLORS
+$titleColor: #080e2e;
+$heroColor: #b5beec;
+$secondaryText: #00000066;
+
+// RESET
 * {
   margin: 0;
   padding: 0;
@@ -19,9 +26,24 @@ ul {
   list-style: none;
 }
 
-button:hover {
-  cursor: pointer;
+input,
+textarea {
+  background-color: transparent;
+  border-style: none;
 }
+
+button {
+  margin-left: 1rem;
+  padding: 1rem 2rem;
+  font: {
+    size: 1.4rem;
+    weight: 400;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 
 h1,
 h2,
@@ -30,11 +52,14 @@ h4,
 h5,
 h6 {
   align-self: flex-start;
+  font-family: 'Ubuntu', sans-serif;
+  color: $titleColor;
+  margin: .3rem 0 2rem .3rem;
 }
 
 h1 {
   font: {
-    size: 2.4rem;
+    size: 6.4rem;
     weight: 700;
   }
 }
@@ -72,6 +97,16 @@ h6 {
     size: 1.4rem;
     weight: 500;
   }
+}
+
+p {
+  color: $secondaryText;
+  font: {
+    size: 2rem;
+    weight: 400;
+  }
+  align-self: flex-start;
+  margin-bottom: 2rem;
 }
 
 section {

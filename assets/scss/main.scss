@@ -5,9 +5,13 @@
   @include flexBetween(column);
   margin-bottom: 2rem;
   padding: 1rem 4rem;
+  background-color: $heroColor;  
 }
 
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
   @include flexBetween(row);
   align-items: center;
   width: 100%;
@@ -26,7 +30,7 @@
 
 .hero {
   @include flexBetween(row);
-  width: 80%;
+  width: 120rem;
   .left {
     @include flexBetween(column);
   }
@@ -107,4 +111,38 @@
   @include flexCenter(column);
   h2 {align-self: center;}
   img {width: 10rem;}
+  .feed {
+    @include flexBetween(row);
+    .left {
+      img {width: 40rem;}
+    }
+  }
+}
+
+.swiper {
+  width: 50rem; //temp
+  height: 20rem; //temp
+}
+
+.subscribe {
+  @include flexCenter(column);
+  h2 {align-self: center;}
+  width: 60rem;
+  margin: 5rem auto;
+  padding: 2rem;
+  background-color: aquamarine;
+  border-radius: 1rem;
+}
+
+.footer {
+  @include flexBetween(row);
+  margin: 3rem 0 2rem;
+  padding: 2rem 4rem;
+  img {width: 20rem;}
+  &__socialmedia {
+    @include flexBetween(column);
+    &--top,--bottom {
+      @include flexStartRow;
+    }
+  }
 }
