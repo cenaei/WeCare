@@ -65,7 +65,7 @@ h4,
 h5,
 h6 {
   align-self: flex-start;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: $titleColor;
   margin: 1.3rem 0 1.3rem .3rem;
 }
@@ -74,19 +74,20 @@ h1 {
   font: {
     size: 6.4rem;
     weight: 700;
+    family: 'Ubuntu', sans-serif;
   }
 }
 
 h2 {
   font: {
-    size: 2.2rem;
+    size: 3.8rem;
     weight: 700;
   }
 }
 
 h3 {
   font: {
-    size: 2rem;
+    size: 3.5rem;
     weight: 600;
   }
 }

@@ -80,3 +80,8 @@
     clear:both;
   }
 }
+
+@mixin maxwidth($width) {
+  max-width: $width;
+  margin: 0 auto;
+}

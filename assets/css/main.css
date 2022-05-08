@@ -51,7 +51,7 @@ h5,
 h6 {
   -ms-flex-item-align: start;
       align-self: flex-start;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #080e2e;
   margin: 1.3rem 0 1.3rem .3rem;
 }
@@ -59,15 +59,16 @@ h6 {
 h1 {
   font-size: 6.4rem;
   font-weight: 700;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 3.8rem;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 3.5rem;
   font-weight: 600;
 }
 
@@ -250,7 +251,7 @@ section {
 }
 
 .search__location, .search__doctor {
-  padding: .5rem 1.3rem;
+  padding: 0.5rem 1.3rem;
   border-radius: 1.3rem;
   border-width: 1px;
   border-color: black;
@@ -323,15 +324,15 @@ section {
 
 .search ul li {
   font-size: 1.3rem;
-  margin: 0 .5rem;
-  padding: .7rem 1rem;
+  margin: 0 0.5rem;
+  padding: 0.7rem 1rem;
   background-color: #ececec;
   border-radius: 1.3rem;
 }
 
 .search__more {
   background-color: #DFF6FF;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
 }
 
 .popular {
@@ -385,7 +386,7 @@ section {
 }
 
 .popular .menu button {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 .popular .list {
@@ -483,6 +484,8 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 100rem;
+  margin: 0 auto;
 }
 
 .find .left {
@@ -531,7 +534,37 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 70%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.whyus ul {
+  margin-bottom: 2rem;
+}
+
+.whyus ul li {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 1.5rem 0;
+}
+
+.whyus button {
+  background-color: #2D31FA;
+  color: white;
+  padding: 1.5rem 3.5rem;
+}
+
+.tik {
+  width: 1rem;
+  height: 1rem;
+  aspect-ratio: 1/ 1;
+  padding: 0.5rem;
+  margin-right: .5rem;
+  color: #2204a7;
+  line-height: 1;
+  -webkit-box-shadow: 0 0 0 0.2rem #2204a7;
+          box-shadow: 0 0 0 0.2rem #2204a7;
+  border-radius: 50%;
 }
 
 .specialist {
@@ -542,12 +575,21 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 110rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.specialist h3, .specialist p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .specialist .doctors {
@@ -587,6 +629,12 @@ section {
       align-self: center;
 }
 
+.specialist .doctors__item p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-top: -0.5rem;
+}
+
 .feedback {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -601,12 +649,18 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 110rem;
+  margin: 0 auto;
 }
 
-.feedback h2 {
+.feedback h2, .feedback p {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.feedback p {
+  text-align: center;
 }
 
 .feedback img {
@@ -627,15 +681,85 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 10rem;
 }
 
 .feedback .feed .left img {
   width: 40rem;
 }
 
+.feedback .feed .right img {
+  border-radius: 4.2rem;
+}
+
+.feedback .feed .right .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 2rem;
+  gap: 2rem;
+}
+
+.feedback .feed .right .profile__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: .5rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.feedback .feed .right .profile__info--name {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.feedback .feed .right .profile__info--stars {
+  color: goldenrod;
+}
+
 .swiper {
   width: 50rem;
-  height: 20rem;
+  height: 30rem;
+}
+
+.swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 2rem;
+  background-color: #ececec;
+  border-radius: 2rem;
 }
 
 .subscribe {
@@ -652,10 +776,11 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 60rem;
+  max-width: 90rem;
+  margin: 0 auto;
   margin: 5rem auto;
   padding: 2rem;
-  background-color: aquamarine;
+  background-color: #5D8BF4;
   border-radius: 1rem;
 }
 
@@ -663,6 +788,18 @@ section {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  text-align: center;
+}
+
+.subscribe div {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+.subscribe div button {
+  background-color: #2D31FA;
+  color: #fff;
 }
 
 .footer {
@@ -703,7 +840,8 @@ section {
           align-items: center;
 }
 
-.footer__socialmedia--top, .footer__socialmedia --bottom {
+.footer__socialmedia--top,
+.footer__socialmedia --bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
