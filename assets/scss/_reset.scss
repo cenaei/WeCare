@@ -5,6 +5,12 @@
 $titleColor: #080e2e;
 $heroColor: #b5beec;
 $secondaryText: #00000066;
+$secondaryColor: #ececec;
+$darkBlue: #051367;
+$blue: #2D31FA;
+$lightBlue: #5D8BF4;
+$lighterBlue: #DFF6FF;
+$darkColor: #0a172e;
 
 // RESET
 * {
@@ -15,10 +21,12 @@ $secondaryText: #00000066;
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #F7F7F7;
 }
 
 ol,
@@ -30,11 +38,16 @@ input,
 textarea {
   background-color: transparent;
   border-style: none;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  outline: none;
 }
 
 button {
   margin-left: 1rem;
   padding: 1rem 2rem;
+  border: none;
+  border-radius: 1.3rem;
   font: {
     size: 1.4rem;
     weight: 400;
@@ -54,7 +67,7 @@ h6 {
   align-self: flex-start;
   font-family: 'Ubuntu', sans-serif;
   color: $titleColor;
-  margin: .3rem 0 2rem .3rem;
+  margin: 1.3rem 0 1.3rem .3rem;
 }
 
 h1 {

@@ -24,7 +24,12 @@
     // justify-self: flex-start;
     li {
       margin: 0 1rem;
+      @include font(1.6rem, 400);
+      &:hover {cursor: pointer;}
     }
+  }
+  button {
+    background-color: $lightBlue;
   }
 }
 
@@ -32,25 +37,77 @@
   @include flexBetween(row);
   width: 120rem;
   .left {
-    @include flexBetween(column);
+    @include flexStartCol;
+    button {
+      background-color: $darkColor;
+      color: white;
+      padding: 2rem 3.5rem;
+      font-size: 1.6rem;
+    }
   }
+  margin-bottom: 7rem;
 }
 
 .search {
   @include flexBetween(column);
+  background-color: #fff;
+  width: 80rem;
+  margin: -10rem auto 2rem;
+  padding: 4rem 8rem;
+  border: {
+    radius: 1.3rem;
+  }
+  // z-index: 9998;
+  form {
+    @include flexBetween(row);
+    width: 100%;
+  }
+  &__location {
+    padding: .5rem 1.3rem;
+    input {width: 30rem;}
+    i {font-size: 1.8rem;}
+    border: {
+      radius: 1.3rem;
+      width: 1px;
+      color: black;
+      style: solid;
+    }
+  }
+  &__doctor {
+    @extend .search__location;
+    margin-right: 2rem;
+  }
+  &__button {
+    @include flexCenter(row);
+    width: 5rem;
+    height: 5rem;
+    background-color: $lightBlue;
+  }
   div {
     @include flexBetween(row);
   }
   ul {
     @include flexBetween(row);
+    margin-top: -1rem;
     li {
-      margin: 0 1rem;
+      font-size: 1.3rem;
+      margin: 0 .5rem;
+      padding: .7rem 1rem;
+      background-color: $secondaryColor;
+      border-radius: 1.3rem;
     }
+  }
+  &__more {
+    background-color: $lighterBlue;
+    border-radius: .3rem;
   }
 }
 
 .popular {
   @include flexBetween(column);
+  max-width: 100rem;
+  margin: 0 auto;
+  // h2 {margin-left: 25rem;}
   &__part {
     @include flexBetween(row);
   }
@@ -67,6 +124,60 @@
     &__item {
       @include flexBetween(column);
       margin: 0 1rem;
+    }
+  }
+}
+// Tab [It's Commented in HTML] ~ Disabled
+.popular {
+  $tab-label-height: 40px;
+  $tab-content-height: 140px;
+  .tab {
+    float: left;
+    
+    &__group {
+      @include clearfix;
+      position: relative;
+      height: $tab-label-height + $tab-content-height;
+    }
+    
+    &__label {
+      display: inline-block;
+      padding: 0 20px;
+      
+      font-size: 16px;
+      line-height: $tab-label-height;
+      cursor: pointer;
+      
+      // Active tab styles
+      background: #fff;
+    }
+    
+    &__content {
+      position: absolute;
+      width: 100%;
+      height: $tab-content-height;
+      top: $tab-label-height;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      overflow-x: auto;
+      
+      background: #fff;
+    }
+    
+    &__radio {
+      display: none;
+  
+      &:not(:checked) {
+        // Inactive tab styles
+        & ~ .tab__label {
+          background: transparent;
+        }
+  
+        & ~ .tab__content {
+          display: none;
+        }
+      }
     }
   }
 }

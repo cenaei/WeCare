@@ -72,3 +72,11 @@
 @mixin container($rem) {
   margin: 0 $rem;
 }
+
+@mixin clearfix {
+  &:after {
+    content:"";
+    display:block;
+    clear:both;
+  }
+}

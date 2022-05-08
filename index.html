@@ -26,8 +26,8 @@
           <li>Health A to Z</li>
         </ul>
         <div class="navbar__button">
-          <button>Log in</button>
-          <button>Sign in</button>
+          <button class="login">Log in</button>
+          <button class="signin">Sign in</button>
         </div>
       </nav>
       <div class="hero">
@@ -38,8 +38,12 @@
             doctors, hospitals and care for you and your family
           </p>
           <div class="hero__button">
-            <button>Profile for Every</button>
-            <button>Dostor in America</button>
+            <button>
+              <i class="fa-solid fa-user-doctor"></i> Profile for Every
+            </button>
+            <button>
+              <i class="fa-solid fa-thumbs-up"></i> Dostor in America
+            </button>
           </div>
         </div>
         <div class="right">
@@ -50,33 +54,158 @@
       </div>
     </header>
     <section class="search">
-      <form action="">
-        <input
-          type="text"
-          placeholder="Search Doctor, Conditions or Prodecurs"
-        />
-        <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
-        <input type="text" placeholder="Set your location" />
-        <!-- <i class="fa-regular fa-location-dot"></i> -->
-        <button type="submit">
+      <form>
+        <div class="search__doctor">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            placeholder="Search Doctor, Conditions or Prodecurs"/>
+        </div>
+        <div class="search__location">
+          <i class="fa-solid fa-location-dot"></i>
+          <input type="text" placeholder="Set your location" />
+        </div>
+        <button class="search__button">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
       <h5>You may be looking for</h5>
-      <div>
+      <div class="search__tags">
         <ul>
-          <li>Family Medicine <i class="fa-solid fa-xmark"></i></li>
-          <li>Pediatrics <i class="fa-solid fa-xmark"></i></li>
-          <li>Top Hospital <i class="fa-solid fa-xmark"></i></li>
-          <li>Telehealth <i class="fa-solid fa-xmark"></i></li>
-          <li>COVID-19 <i class="fa-solid fa-xmark"></i></li>
-          <li>Orthopedic Sugery <i class="fa-solid fa-xmark"></i></li>
+          <li id="list_1">
+            Family Medicine
+            <i
+              id="item_1"
+              class="fa-solid fa-xmark"
+              onclick="deleteitem(this.id)"
+            ></i>
+          </li>
+          <li id="list_2">
+            Pediatrics
+            <i
+              id="item_2"
+              class="fa-solid fa-xmark"
+              onclick="deleteitem(this.id)"
+            ></i>
+          </li>
+          <li id="list_3">
+            Top Hospital
+            <i
+              id="item_3"
+              class="fa-solid fa-xmark"
+              onclick="deleteitem(this.id)"
+            ></i>
+          </li>
+          <li id="list_4">
+            Telehealth
+            <i
+              id="item_4"
+              class="fa-solid fa-xmark"
+              onclick="deleteitem(this.id)"
+            ></i>
+          </li>
+          <li id="list_5">
+            COVID-19
+            <i
+              id="item_5"
+              class="fa-solid fa-xmark"
+              onclick="deleteitem(this.id)"
+            ></i>
+          </li>
+          <li id="list_6">
+            Orthopedic Sugery
+            <i
+              id="item_6"
+              class="fa-solid fa-xmark"
+              onclick="deleteitem(this.id)"
+            ></i>
+          </li>
         </ul>
-        <button>More</button>
+        <button class="search__more">More</button>
       </div>
     </section>
     <section class="popular">
       <h2>Popular Searches on Wecare</h2>
+      <!-- <div class="tab__group">
+        <div class="tab">
+          <input class="tab__radio" type="radio" id="tab-1" name="tab-group-1" checked/>
+          <label class="tab__label" for="tab-1">Specialties</label>
+          <div class="tab__content list">
+            <div class="list__item">
+              <img
+                src="./assets/img/icon/Dermatology.png"
+                alt="Dermatology Logo"/>
+              <h6>Dermatology</h6>
+            </div>
+            <div class="list__item">
+              <img
+                src="./assets/img/icon/Internal Medicine.png"
+                alt="Internal Medicine Logo"/>
+              <h6>Internal Medicine</h6>
+            </div>
+            <div class="list__item">
+              <img src="./assets/img/icon/Neurology.png" alt="Neurology Logo" />
+              <h6>Neurology</h6>
+            </div>
+            <div class="list__item">
+              <img
+                src="./assets/img/icon/General Medicine.png"
+                alt="General Medicine Logo"/>
+              <h6>General Medicine</h6>
+            </div>
+            <div class="list__item">
+              <img src="./assets/img/icon/Dentisty.png" alt="Dentisty Logo" />
+              <h6>Dentisty</h6>
+            </div>
+            <div class="list__item">
+              <img
+                src="./assets/img/icon/Otolaryngology.png"
+                alt="Otolaryngology Logo"/>
+              <h6>Otolaryngology</h6>
+            </div>
+          </div>
+        </div>
+        <div class="tab">
+          <input class="tab__radio" type="radio" id="tab-2" name="tab-group-1"/>
+          <label class="tab__label" for="tab-2">Conditions</label>
+          <div class="tab__content list">
+            <div class="list__item">
+              <img
+                src="./assets/img/icon/Dermatology.png"
+                alt="Dermatology Logo"/>
+              <h6>Dermatology</h6>
+            </div>
+            <div class="list__item">
+              <img
+                src="./assets/img/icon/Internal Medicine.png"
+                alt="Internal Medicine Logo"/>
+              <h6>Internal Medicine</h6>
+            </div>
+          </div>
+        </div>
+        <div class="tab">
+          <input class="tab__radio" type="radio" id="tab-3" name="tab-group-1"/>
+          <label class="tab__label" for="tab-3">Procedures</label>
+          <div class="tab__content list">
+            <div class="list__item">
+              <img
+                src="./assets/img/icon/Dermatology.png"
+                alt="Dermatology Logo"/>
+              <h6>Dermatology</h6>
+            </div>
+            <div class="list__item">
+              <img
+                src="./assets/img/icon/Internal Medicine.png"
+                alt="Internal Medicine Logo"/>
+              <h6>Internal Medicine</h6>
+            </div>
+            <div class="list__item">
+              <img src="./assets/img/icon/Neurology.png" alt="Neurology Logo" />
+              <h6>Neurology</h6>
+            </div>
+          </div>
+        </div>
+      </div> -->
       <div class="popular__part">
         <div class="menu">
           <button>Specialties</button>
@@ -87,15 +216,13 @@
           <div class="list__item">
             <img
               src="./assets/img/icon/Dermatology.png"
-              alt="Dermatology Logo"
-            />
+              alt="Dermatology Logo"/>
             <h6>Dermatology</h6>
           </div>
           <div class="list__item">
             <img
               src="./assets/img/icon/Internal Medicine.png"
-              alt="Internal Medicine Logo"
-            />
+              alt="Internal Medicine Logo"/>
             <h6>Internal Medicine</h6>
           </div>
           <div class="list__item">
@@ -105,8 +232,7 @@
           <div class="list__item">
             <img
               src="./assets/img/icon/General Medicine.png"
-              alt="General Medicine Logo"
-            />
+              alt="General Medicine Logo"/>
             <h6>General Medicine</h6>
           </div>
           <div class="list__item">
@@ -116,8 +242,7 @@
           <div class="list__item">
             <img
               src="./assets/img/icon/Otolaryngology.png"
-              alt="Otolaryngology Logo"
-            />
+              alt="Otolaryngology Logo"/>
             <h6>Otolaryngology</h6>
           </div>
         </div>
@@ -256,8 +381,7 @@
                   <figure>
                     <img
                       src="./assets/img/person/ (1).jpg"
-                      alt="person image"
-                    />
+                      alt="person image"/>
                   </figure>
                   <div class="profile__info">
                     <div class="profile__info--name">Constance J. Ericson</div>
@@ -281,8 +405,7 @@
                   <figure>
                     <img
                       src="./assets/img/person/ (2).jpg"
-                      alt="person image"
-                    />
+                      alt="person image"/>
                   </figure>
                   <div class="profile__info">
                     <div class="profile__info--name">Henry R. Hicks</div>
@@ -306,8 +429,7 @@
                   <figure>
                     <img
                       src="./assets/img/person/ (3).jpg"
-                      alt="person image"
-                    />
+                      alt="person image"/>
                   </figure>
                   <div class="profile__info">
                     <div class="profile__info--name">Elias B. Stamper</div>
@@ -330,8 +452,7 @@
                   <figure>
                     <img
                       src="./assets/img/person/ (4).jpg"
-                      alt="person image"
-                    />
+                      alt="person image"/>
                   </figure>
                   <div class="profile__info">
                     <div class="profile__info--name">Shirley M. Sears</div>
@@ -461,5 +582,6 @@
         },
       });
     </script>
+    <script src="./app.js"></script>
   </body>
 </html>

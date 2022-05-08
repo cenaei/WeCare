@@ -8,10 +8,12 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #F7F7F7;
 }
 
 ol,
@@ -23,11 +25,16 @@ input,
 textarea {
   background-color: transparent;
   border-style: none;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  outline: none;
 }
 
 button {
   margin-left: 1rem;
   padding: 1rem 2rem;
+  border: none;
+  border-radius: 1.3rem;
   font-size: 1.4rem;
   font-weight: 400;
 }
@@ -46,7 +53,7 @@ h6 {
       align-self: flex-start;
   font-family: 'Ubuntu', sans-serif;
   color: #080e2e;
-  margin: .3rem 0 2rem .3rem;
+  margin: 1.3rem 0 1.3rem .3rem;
 }
 
 h1 {
@@ -151,6 +158,16 @@ section {
 
 .navbar ul li {
   margin: 0 1rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.navbar ul li:hover {
+  cursor: pointer;
+}
+
+.navbar button {
+  background-color: #5D8BF4;
 }
 
 .hero {
@@ -168,6 +185,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
   width: 120rem;
+  margin-bottom: 7rem;
 }
 
 .hero .left {
@@ -178,12 +196,19 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.hero .left button {
+  background-color: #0a172e;
+  color: white;
+  padding: 2rem 3.5rem;
+  font-size: 1.6rem;
 }
 
 .search {
@@ -200,6 +225,67 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #fff;
+  width: 80rem;
+  margin: -10rem auto 2rem;
+  padding: 4rem 8rem;
+  border-radius: 1.3rem;
+}
+
+.search form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.search__location, .search__doctor {
+  padding: .5rem 1.3rem;
+  border-radius: 1.3rem;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+}
+
+.search__location input, .search__doctor input {
+  width: 30rem;
+}
+
+.search__location i, .search__doctor i {
+  font-size: 1.8rem;
+}
+
+.search__doctor {
+  margin-right: 2rem;
+}
+
+.search__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background-color: #5D8BF4;
 }
 
 .search div {
@@ -232,10 +318,20 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: -1rem;
 }
 
 .search ul li {
-  margin: 0 1rem;
+  font-size: 1.3rem;
+  margin: 0 .5rem;
+  padding: .7rem 1rem;
+  background-color: #ececec;
+  border-radius: 1.3rem;
+}
+
+.search__more {
+  background-color: #DFF6FF;
+  border-radius: .3rem;
 }
 
 .popular {
@@ -252,6 +348,8 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 100rem;
+  margin: 0 auto;
 }
 
 .popular__part {
@@ -321,6 +419,54 @@ section {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 1rem;
+}
+
+.popular .tab {
+  float: left;
+}
+
+.popular .tab__group {
+  position: relative;
+  height: 180px;
+}
+
+.popular .tab__group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.popular .tab__label {
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 40px;
+  cursor: pointer;
+  background: #fff;
+}
+
+.popular .tab__content {
+  position: absolute;
+  width: 100%;
+  height: 140px;
+  top: 40px;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  overflow-x: auto;
+  background: #fff;
+}
+
+.popular .tab__radio {
+  display: none;
+}
+
+.popular .tab__radio:not(:checked) ~ .tab__label {
+  background: transparent;
+}
+
+.popular .tab__radio:not(:checked) ~ .tab__content {
+  display: none;
 }
 
 .find {
