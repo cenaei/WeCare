@@ -4,6 +4,13 @@ const listItemEls = document.querySelectorAll(".list__item")
 const specialtiesEls = document.querySelectorAll(".specialties")
 const conditionsEls = document.querySelectorAll(".conditions")
 const proceduresEls = document.querySelectorAll(".procedures")
+const splashScreen = document.querySelector(".splash-screen")
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  setTimeout(() => {
+    splashScreen.classList.add("hidden")
+  }, 2000)
+});
 
 // Removing Search Tags
 function deleteitem(id) {

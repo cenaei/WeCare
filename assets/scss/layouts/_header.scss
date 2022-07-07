@@ -12,7 +12,7 @@
   margin: 0 auto;
   background-color: $heroColor;
   top: 0;
-  z-index: 9999;
+  z-index: 999;
   @include flexBetween(row);
   align-items: center;
   @include font(1.4rem, 600);
