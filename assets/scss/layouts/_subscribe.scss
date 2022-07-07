@@ -16,6 +16,12 @@
     button {
       background-color: $blue;
       color: #fff;
+      transition: background-color 300ms ease-in-out;
+      &:hover {
+        background-color: white;
+        border: 1px solid $blue;
+        color: $blue;
+      }
     }
   }
 }

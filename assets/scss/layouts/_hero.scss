@@ -8,6 +8,10 @@
       color: white;
       padding: 2rem 3.5rem;
       font-size: 1.6rem;
+      transition: background-color 200ms ease-in-out;
+      &:hover {
+        background-color: $darkColorHover;
+      }
     }
   }
   margin-bottom: 7rem;

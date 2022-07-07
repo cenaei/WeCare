@@ -1,7 +1,7 @@
 .search {
   @include flexBetween(column);
   background-color: #fff;
-  width: 80rem;
+  width: 90rem;
   margin: -10rem auto 2rem;
   padding: 4rem 8rem;
   border: {
@@ -36,12 +36,15 @@
     width: 5rem;
     height: 5rem;
     background-color: $lightBlue;
+    transition: background-color 200ms ease-in-out;
+    &:hover { background-color: $lightBlueHover}
   }
   div {
     @include flexBetween(row);
   }
   ul {
     @include flexBetween(row);
+    gap: .7rem;
     margin-top: -1rem;
     li {
       font-size: 1.3rem;

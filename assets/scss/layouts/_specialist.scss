@@ -25,6 +25,10 @@
         margin-top: -0.5rem;
       }
       @include flexCenter(column);
+      transition: transform 500ms ease-in-out;
+      &:hover {
+        transform: scale(1.1)
+      }
     }
   }
 }

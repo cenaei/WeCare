@@ -1,9 +1,12 @@
 .popular {
   @include flexBetween(column);
   @include maxwidth(100rem);
+  margin-bottom: 5rem;
   // h2 {margin-left: 25rem;}
   &__part {
-    @include flexBetween(row);
+    width: 100%;
+    @include flexStartRow;
+    gap: 5rem;
   }
 
   .menu {

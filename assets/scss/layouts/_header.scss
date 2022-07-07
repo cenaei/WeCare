@@ -6,12 +6,15 @@
 }
 
 .navbar {
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  padding: 1rem 8rem;
+  margin: 0 auto;
+  background-color: $heroColor;
   top: 0;
   z-index: 9999;
   @include flexBetween(row);
   align-items: center;
-  width: 100%;
   @include font(1.4rem, 600);
   img {
     height: 5rem;
@@ -22,12 +25,14 @@
     li {
       margin: 0 1rem;
       @include font(1.6rem, 400);
-      &:hover {
-        cursor: pointer;
-      }
+      @include underline;
     }
   }
   button {
     background-color: $lightBlue;
+    transition: background-color 200ms ease-in-out;
+    &:hover {
+      background: $lightBlueHover;
+    }
   }
 }

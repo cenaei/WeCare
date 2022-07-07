@@ -100,6 +100,43 @@ section {
   margin: 1.5rem 4rem;
 }
 
+.tik {
+  width: 1rem;
+  height: 1rem;
+  aspect-ratio: 1/ 1;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  color: #2204a7;
+  line-height: 1;
+  -webkit-box-shadow: 0 0 0 0.2rem #2204a7;
+          box-shadow: 0 0 0 0.2rem #2204a7;
+  border-radius: 50%;
+}
+
+.swiper {
+  width: 50rem;
+  height: 30rem;
+}
+
+.swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 2rem;
+  background-color: #ececec;
+  border-radius: 2rem;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -120,8 +157,11 @@ section {
 }
 
 .navbar {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  padding: 1rem 8rem;
+  margin: 0 auto;
+  background-color: #b5beec;
   top: 0;
   z-index: 9999;
   display: -webkit-box;
@@ -138,7 +178,6 @@ section {
       -ms-flex-align: center;
           align-items: center;
   align-items: center;
-  width: 100%;
   font-size: 1.4rem;
   font-weight: 600;
 }
@@ -161,6 +200,33 @@ section {
   margin: 0 1rem;
   font-size: 1.6rem;
   font-weight: 400;
+  display: inline-block;
+  position: relative;
+}
+
+.navbar ul li:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0a172e;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+.navbar ul li:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 .navbar ul li:hover {
@@ -169,6 +235,12 @@ section {
 
 .navbar button {
   background-color: #5D8BF4;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+.navbar button:hover {
+  background: #4279f9;
 }
 
 .hero {
@@ -210,6 +282,12 @@ section {
   color: white;
   padding: 2rem 3.5rem;
   font-size: 1.6rem;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+.hero .left button:hover {
+  background-color: #18263c;
 }
 
 .search {
@@ -227,7 +305,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fff;
-  width: 80rem;
+  width: 90rem;
   margin: -10rem auto 2rem;
   padding: 4rem 8rem;
   border-radius: 1.3rem;
@@ -287,6 +365,12 @@ section {
   width: 5rem;
   height: 5rem;
   background-color: #5D8BF4;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+.search__button:hover {
+  background-color: #4279f9;
 }
 
 .search div {
@@ -319,6 +403,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: .7rem;
   margin-top: -1rem;
 }
 
@@ -351,9 +436,11 @@ section {
           align-items: center;
   max-width: 100rem;
   margin: 0 auto;
+  margin-bottom: 5rem;
 }
 
 .popular__part {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -361,12 +448,13 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 5rem;
 }
 
 .popular .menu {
@@ -486,6 +574,7 @@ section {
           align-items: center;
   max-width: 100rem;
   margin: 0 auto;
+  width: 100%;
 }
 
 .find .left {
@@ -536,6 +625,7 @@ section {
           align-items: center;
   max-width: 120rem;
   margin: 0 auto;
+  width: 100%;
 }
 
 .whyus ul {
@@ -545,26 +635,30 @@ section {
 .whyus ul li {
   font-size: 2rem;
   font-weight: 400;
-  margin: 2rem 0;
+  margin: 2.5rem 0;
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+}
+
+.whyus ul li:hover {
+  -webkit-transform: translate(1rem);
+          transform: translate(1rem);
 }
 
 .whyus button {
   background-color: #2D31FA;
   color: white;
   padding: 1.5rem 3.5rem;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
-.tik {
-  width: 1rem;
-  height: 1rem;
-  aspect-ratio: 1/ 1;
-  padding: 0.5rem;
-  margin-right: 0.5rem;
-  color: #2204a7;
-  line-height: 1;
-  -webkit-box-shadow: 0 0 0 0.2rem #2204a7;
-          box-shadow: 0 0 0 0.2rem #2204a7;
-  border-radius: 50%;
+.whyus button:hover {
+  background-color: white;
+  border: 2px solid #2D31FA;
+  color: #2D31FA;
 }
 
 .specialist {
@@ -623,6 +717,10 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 }
 
 .specialist .doctors__item h4 {
@@ -635,6 +733,11 @@ section {
   font-size: 1.4rem;
   font-weight: 400;
   margin-top: -0.5rem;
+}
+
+.specialist .doctors__item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .feedback {
@@ -741,30 +844,6 @@ section {
   color: goldenrod;
 }
 
-.swiper {
-  width: 50rem;
-  height: 30rem;
-}
-
-.swiper-slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  gap: 2rem;
-  background-color: #ececec;
-  border-radius: 2rem;
-}
-
 .subscribe {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -803,6 +882,14 @@ section {
 .subscribe div button {
   background-color: #2D31FA;
   color: #fff;
+  -webkit-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
+}
+
+.subscribe div button:hover {
+  background-color: white;
+  border: 1px solid #2D31FA;
+  color: #2D31FA;
 }
 
 .footer {
@@ -835,11 +922,17 @@ section {
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0;
-  grid-row-gap: 10px;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+}
+
+.footer__socialmedia a {
+  text-decoration: none;
 }
 
 .footer__socialmedia a i {
+  width: 4rem;
+  height: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -854,11 +947,15 @@ section {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.8rem;
-  width: 3rem;
-  height: 3rem;
   background-color: #5D8BF4;
   color: white;
   border-radius: 1.3rem;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+.footer__socialmedia a i:hover {
+  background-color: #4279f9;
 }
 
 .footer ul {
@@ -882,6 +979,37 @@ section {
   font-size: 1.8rem;
   font-weight: 300;
   text-transform: capitalize;
+  display: inline-block;
+  position: relative;
+}
+
+.footer ul li:hover {
+  cursor: pointer;
+}
+
+.footer ul li:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0a172e;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+.footer ul li:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 .footer ul li:hover {

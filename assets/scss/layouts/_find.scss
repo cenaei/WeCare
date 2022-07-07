@@ -1,6 +1,7 @@
 .find {
   @include flexBetween(row);
   @include maxwidth(100rem);
+  width: 100%;
   .left {
     @include flexBetween(column);
   }
