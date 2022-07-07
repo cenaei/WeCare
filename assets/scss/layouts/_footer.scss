@@ -1,0 +1,36 @@
+.footer {
+  @include d-flex(row, space-between, flex-start);
+  margin: 3rem 0 2rem;
+  padding: 2rem 4rem;
+  img {
+    width: 20rem;
+  }
+  &__socialmedia {
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 10px;
+    a {
+      i {
+        @include flexCenter(row);
+        font-size: 1.8rem;
+        width: 3rem;
+        height: 3rem;
+        background-color: $lightBlue;
+        color: white;
+        border-radius: 1.3rem;
+      }
+    }
+  }
+  ul {
+    @include flexStartCol;
+    li {
+      margin: 1rem 0;
+      @include font(1.8rem, 300);
+      text-transform: capitalize;
+      &:hover {cursor: pointer;}
+    }
+  }
+}

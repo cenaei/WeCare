@@ -1,0 +1,30 @@
+.specialist {
+  @include flexCenter(column);
+  @include maxwidth(110rem);
+  h3,
+  h5,
+  p {
+    align-self: center;
+  }
+  margin-top: 2rem;
+  .doctors {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    img {
+      width: 30rem;
+    }
+    &__item {
+      h4 {
+        align-self: center;
+      }
+      p {
+        @include font(1.4rem, 400);
+        margin-top: -0.5rem;
+      }
+      @include flexCenter(column);
+    }
+  }
+}

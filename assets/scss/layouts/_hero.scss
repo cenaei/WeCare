@@ -1,0 +1,14 @@
+.hero {
+  @include flexBetween(row);
+  width: 120rem;
+  .left {
+    @include flexStartCol;
+    button {
+      background-color: $darkColor;
+      color: white;
+      padding: 2rem 3.5rem;
+      font-size: 1.6rem;
+    }
+  }
+  margin-bottom: 7rem;
+}

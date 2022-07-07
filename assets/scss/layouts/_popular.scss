@@ -1,0 +1,77 @@
+.popular {
+  @include flexBetween(column);
+  @include maxwidth(100rem);
+  // h2 {margin-left: 25rem;}
+  &__part {
+    @include flexBetween(row);
+  }
+
+  .menu {
+    @include flexBetween(column);
+    button {
+      margin: 0.5rem 0;
+    }
+  }
+
+  .list {
+    @include flexBetween(row);
+    &__item {
+      @include flexBetween(column);
+      margin: 0 1rem;
+    }
+  }
+}
+// Tab [It's Commented in HTML] ~ Disabled
+.popular {
+  $tab-label-height: 40px;
+  $tab-content-height: 140px;
+  .tab {
+    float: left;
+
+    &__group {
+      @include clearfix;
+      position: relative;
+      height: $tab-label-height + $tab-content-height;
+    }
+
+    &__label {
+      display: inline-block;
+      padding: 0 20px;
+
+      font-size: 16px;
+      line-height: $tab-label-height;
+      cursor: pointer;
+
+      // Active tab styles
+      background: #fff;
+    }
+
+    &__content {
+      position: absolute;
+      width: 100%;
+      height: $tab-content-height;
+      top: $tab-label-height;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      overflow-x: auto;
+
+      background: #fff;
+    }
+
+    &__radio {
+      display: none;
+
+      &:not(:checked) {
+        // Inactive tab styles
+        & ~ .tab__label {
+          background: transparent;
+        }
+
+        & ~ .tab__content {
+          display: none;
+        }
+      }
+    }
+  }
+}

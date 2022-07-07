@@ -1,0 +1,44 @@
+.feedback {
+  @include flexCenter(column);
+  @include maxwidth(110rem);
+  h2,
+  p {
+    align-self: center;
+  }
+  p {
+    text-align: center;
+  }
+  img {
+    width: 10rem;
+  }
+  .feed {
+    @include flexBetween(row);
+    gap: 10rem;
+    .left {
+      img {
+        width: 40rem;
+      }
+    }
+    .right {
+      img {
+        border-radius: 4.2rem;
+      }
+      .profile {
+        @include flexStartRow;
+        margin-left: 2rem;
+        gap: 2rem;
+        &__info {
+          @include flexStartCol;
+          gap: 0.5rem;
+          @include font(1.4rem, 400);
+          &--name {
+            @include font(1.5rem, 500);
+          }
+          &--stars {
+            color: goldenrod;
+          }
+        }
+      }
+    }
+  }
+}

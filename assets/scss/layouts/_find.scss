@@ -1,0 +1,10 @@
+.find {
+  @include flexBetween(row);
+  @include maxwidth(100rem);
+  .left {
+    @include flexBetween(column);
+  }
+  &__items {
+    @include flexBetween(column);
+  }
+}

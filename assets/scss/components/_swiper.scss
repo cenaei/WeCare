@@ -1,0 +1,11 @@
+.swiper {
+  width: 50rem; //temp
+  height: 30rem; //temp
+  &-slide {
+    @include flexStartCol;
+    gap: 2rem;
+    background-color: $secondaryColor;
+    border-radius: 2rem;
+    // padding-left: 3rem;
+  }
+}

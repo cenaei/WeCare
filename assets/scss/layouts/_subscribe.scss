@@ -1,0 +1,21 @@
+.subscribe {
+  @include flexCenter(column);
+  @include maxwidth(90rem);
+  h2 {
+    align-self: center;
+    text-align: center;
+  }
+  margin: 5rem auto;
+  padding: 2rem;
+  background-color: $lightBlue;
+  border-radius: 1rem;
+  div {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    button {
+      background-color: $blue;
+      color: #fff;
+    }
+  }
+}

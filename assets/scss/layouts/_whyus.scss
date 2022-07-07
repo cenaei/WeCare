@@ -1,0 +1,16 @@
+.whyus {
+  @include flexBetween(row);
+  @include maxwidth(120rem);
+  ul {
+    margin-bottom: 2rem;
+    li {
+      @include font(2rem, 400);
+      margin: 2rem 0;
+    }
+  }
+  button {
+    background-color: $blue;
+    color: white;
+    padding: 1.5rem 3.5rem;
+  }
+}
